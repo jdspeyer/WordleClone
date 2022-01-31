@@ -55,7 +55,6 @@ async function processGuess() {
                 letterSquare.classList.add("letterAnimation")
                 lettersCorrect += 1;
                 choppedWord = choppedWord.replaceAt(i - 1, ".");
-                console.log(choppedWord);
             }
 
             //Letter is in word but not in the correct spot
@@ -105,7 +104,7 @@ async function processGuess() {
      * @returns boolean true or false. True if it is in the dictionary, false if it is not in the dictionary.
      */
     function checkDictionary(userGuess) {
-        let guess = userGuess.at(0).toUpperCase() + userGuess.slice(1).toLowerCase();
+        let guess = userGuess.at(0).toLowerCase() + userGuess.slice(1).toLowerCase();
         return dictionary.includes(guess);
     }
 
