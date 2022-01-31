@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="styles.css" rel="stylesheet">
+   </link>
+   <title>Wordle Clone</title>
+</head>
+
+<body>
+
+   <div id="alertWrapper" class="hidden">
+      <div id="alert">
+         <h1 id="alertId">Title</h1>
+         <p id="alertMessage">Message</p>
+         <button id="alertDismiss" onclick="removeAlert()">Dismiss</button>
+      </div>
+   </div>
+
+   <div id="gameHeader">
+      <h1>Wordle Clone</h1>
+      <hr>
+   </div>
+
+   <div id="gameBoard">
+      <!-- ROW 1-->
+      <div class="letterSquare" id="row1col1">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row1col2">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row1col3">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row1col4">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row1col5">
+         <h2></h2>
+      </div>
+
+      <!-- ROW 2-->
+      <div class="letterSquare" id="row2col1">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row2col2">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row2col3">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row2col4">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row2col5">
+         <h2></h2>
+      </div>
+
+      <!-- ROW 3-->
+      <div class="letterSquare" id="row3col1">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row3col2">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row3col3">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row3col4">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row3col5">
+         <h2></h2>
+      </div>
+
+      <!-- ROW 4-->
+      <div class="letterSquare" id="row4col1">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row4col2">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row4col3">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row4col4">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row4col5">
+         <h2></h2>
+      </div>
+
+      <!-- ROW 5-->
+      <div class="letterSquare" id="row5col1">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row5col2">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row5col3">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row5col4">
+         <h2></h2>
+      </div>
+      <div class="letterSquare" id="row5col5">
+         <h2></h2>
+      </div>
+   </div>
+
+   <form id="gameInput" onsubmit="return shakeButton(event)">
+      <input id="userGuess" type="text" maxlength="5" placeholder="GUESS" autocomplete="off">
+      <button id="submitGuess" type="button" onclick="processGuess()">Submit</button>
+   </form>
+
+
+   <script src="dictionary.js"></script>
+   <script src="script.js"></script>
+</body>
+
+</html>
